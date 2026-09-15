@@ -1,5 +1,6 @@
-import { APP_NAME, type Health } from "@commonplace/shared";
+import { env } from "./config/env.js";
+import { createApp } from "./app.js";
 
-const health: Health = { status: "ok", uptime: process.uptime() };
-
-console.log(APP_NAME, health);
+createApp().listen(env.PORT, () => {
+  console.log(`API listening on http://localhost:${env.PORT}`);
+});
