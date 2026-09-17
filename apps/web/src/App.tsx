@@ -16,7 +16,11 @@ export function App() {
     <main>
       <h1>{APP_NAME}</h1>
       {error && <p>API error: {error}</p>}
-      {health && <p>API status: {health.status} (uptime {health.uptime.toFixed(1)}s)</p>}
+      {health && (
+        <p>
+          API status: {health.status} (uptime {health.uptime.toFixed(1)}s)
+        </p>
+      )}
       {!health && !error && <p>Checking API…</p>}
     </main>
   );

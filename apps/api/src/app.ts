@@ -16,7 +16,6 @@ export function createApp() {
     res.json(body);
   });
 
-
   app.use(errorHandler);
 
   return app;
